@@ -1,0 +1,14 @@
+import hashlib
+
+string =input("Digite seu texto: ")
+
+menu = int(input(" *** MENU - ESCOLHA O HASH ***
+		1) SHA256
+		2) SHA512
+		Digite o número do hash a ser gerado: "))
+if menu == 1:
+    resultado = hashlib.SHA256(string.encode('utf-8'))
+    print('A hash SHA256 da string: , string, 'é: ', resultado.hexdigest())
+elif menu == 2:
+    resultado = hashlib.SHA512(string.encode('utf-8'))
+    print('A hash SHA512 da string: , string, 'é: ', resultado.hexdigest())
